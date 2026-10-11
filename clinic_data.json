@@ -1,0 +1,121 @@
+{
+    "users": [
+        {
+            "user_id": "A001",
+            "name": "Clinic Admin",
+            "phone": "01000000000",
+            "role": "admin",
+            "password": "scrypt:32768:8:1$piyHDJKqfBTvkih6$3ee5e48e17f1ce7d2a803ae287687e541334eb13e0c19f75c7866b371815513a4a0fb22fea94cfac57423dc6c112523bec6a95b7aaea404c3c2df13b5b6d13bf",
+            "password_hashed": true
+        },
+        {
+            "user_id": "D001",
+            "name": "D\\Ahmed rami",
+            "phone": "01023456789",
+            "role": "doctor",
+            "password": "scrypt:32768:8:1$NlSmnF4UP7xB0J30$5d26f35f8bfcd8a11d7737733414de5de7ad03dfeadc6211e0decdd6782d759f4dd5e819b36e91cdf5762909a7dfa668275d61e044d31d15a0faabd0c66193a0",
+            "password_hashed": true
+        },
+        {
+            "user_id": "P001",
+            "name": "youssef tamer talat",
+            "phone": "01080078534",
+            "role": "patient",
+            "password": "scrypt:32768:8:1$VJsAQ2mCTJb63iLm$03a53428b6dfd70fb4f663787a2585f125a2c788b73a1ca11884deb326f539c23fe90bbbf6c01c0e66684e1043650cbe8c9769d6b94aee8231db746bb5608446",
+            "password_hashed": true
+        }
+    ],
+    "patients": [
+        {
+            "patient_id": "P001",
+            "name": "youssef tamer talat",
+            "age": 20,
+            "phone": "01080078534",
+            "case_type": null,
+            "priority": null,
+            "appointments": [
+                "AP001"
+            ]
+        }
+    ],
+    "doctors": [
+        {
+            "doctor_id": "D001",
+            "name": "D\\Ahmed rami",
+            "specialty": "baby",
+            "phone": "01023456789",
+            "rate": 5.0,
+            "appointment_duration": 30,
+            "working_days": [
+                "Saturday",
+                "Sunday",
+                "Monday"
+            ],
+            "working_hours": {
+                "start": "09:00",
+                "end": "17:00"
+            },
+            "availability": true,
+            "assigned_nurses": []
+        }
+    ],
+    "nurses": [],
+    "appointments": [
+        {
+            "appointment_id": "AP001",
+            "patient_id": "P001",
+            "doctor_id": "D001",
+            "date": "2026-10-11",
+            "time": "11:00",
+            "service_type": "consultation",
+            "status": "CONFIRMED",
+            "payment_status": "PAID",
+            "case_type": null,
+            "priority": null,
+            "arrival_time": null
+        }
+    ],
+    "visits": [],
+    "bills": [
+        {
+            "bill_id": "B001",
+            "patient_id": "P001",
+            "doctor_id": "D001",
+            "service_type": "consultation",
+            "base_rate": 2.5,
+            "doctor_rate": 5.0,
+            "total": 12.5,
+            "payment_status": "PAID",
+            "appointment_id": "AP001"
+        }
+    ],
+    "payments": [
+        {
+            "payment_code": "945239014141",
+            "confirmation_number": 467645282,
+            "amount": 12.5,
+            "status": "PAID",
+            "appointment_id": "AP001",
+            "patient_id": "P001"
+        }
+    ],
+    "waiting_queue": [],
+    "action_history": [
+        "Doctor D001 added.",
+        "Patient P001 registered.",
+        "Patient P001 booked appointment AP001.",
+        "Patient P001 paid appointment AP001."
+    ],
+    "settings": {
+        "service_rates": {
+            "consultation": 2.5,
+            "examination": 3.75,
+            "emergency": 6.75
+        },
+        "case_priority": {
+            "emergency": 1,
+            "urgent": 2,
+            "regular": 3
+        }
+    }
+}
